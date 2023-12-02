@@ -3,7 +3,7 @@ const User = require('../models/user')
 const authentification = require('../middlewares/authentification')
 const router = new express.Router()
 
-router.post('/api/users', async (req, res) => {
+router.post('/api/user', async (req, res) => {
     const user = new User(req.body)
     try {
         const authToken = await user.generateAuthTokenAndSaveUser()
